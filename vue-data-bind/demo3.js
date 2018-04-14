@@ -35,7 +35,7 @@ function Dep(){
 }
 Dep.target = null;
 Dep.prototype.addSub = function(sub){
-    thiss.subs.push(sub)
+    this.subs.push(sub)
 }
 Dep.prototype.depend = function(sub){
     Dep.target.addDep(sub)
