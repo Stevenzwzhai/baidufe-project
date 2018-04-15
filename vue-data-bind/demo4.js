@@ -95,6 +95,22 @@ Observer.prototype.$watch = function(key, cb){
     eventBus.on(key, cb)
 }   
 
+function Watcher(){
+
+}
+
+function Directive(name, el, vm, expression){
+    this.name = name;
+    this.el = el;
+    this.vm = vm;
+    this.expression = expression;
+    this.attr = "nodeValue";
+    this.update();
+}
+Directive.prototype.update = function(){
+    this.el[this.attr] = this.vm.$data[this.expression];
+}
+
 function Vue(options){
     this.domRoot = document.querySelector(options.el);
     this.data = new Observer(options.data).data
