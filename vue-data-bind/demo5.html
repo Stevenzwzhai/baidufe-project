@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo4</title>
+    <style type="text/css">
+        .test{
+            background-color: red;
+            height:300px;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            margin:0;
+        }
+        .name{
+            width: 300px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            width: 440px;
+            height: 536px;
+            background: #ffffff;
+            margin-top: -268px;
+            margin-left: -220px;
+            border-radius: 5px;
+        }
+        ul{
+            background-color: red;
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+        li{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <div>awafafa</div>
+        <ul>
+        <li>12</li>
+        <li>1123</li>
+    </ul>
+    <div id="age"></div>
+    </div>
+    <div id="app">
+        aaaa
+        <p>姓名：{{user.name}}</p>
+        bbbb
+        <p>年龄：{{user.age}}</p>
+        cccc
+        <input type="text" v-model="user.age" name=""/>
+    </div>
+    <div id="name">sss</div>
+<script type="text/javascript" src="./demo5.js"></script>
+<script type="text/javascript">
+    let app = new Vue({
+      el: '#app',
+      data: {
+        user: {
+          name: 'youngwind',
+          age: 25
+        }
+      }
+    });
+    document.getElementById('name').innerHTML = "asdlfalsdfas\n\rdfasdfasdf"
+</script>
+</body>
+</html>

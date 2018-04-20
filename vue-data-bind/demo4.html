@@ -18,6 +18,7 @@
         cccc
         <input type="text" v-model="user.age" name=""/>
     </div>
+    <div id="name">sss</div>
 <script type="text/javascript" src="./demo4.js"></script>
 <script type="text/javascript">
     let app = new Vue({
@@ -29,6 +30,7 @@
         }
       }
     });
+    document.getElementById('name').textContent = "<script>alert(12)<"+"/script>"
 </script>
 </body>
 </html>
